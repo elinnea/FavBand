@@ -1,0 +1,21 @@
+﻿@using WebApplication1.Models;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customers</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Customers</h1>
+    @DateTime.Now           @*serverside*@
+
+    <ul>
+        @foreach (var item in (Customer[])ViewBag.Customers)
+        {
+            <li>@item.CompanyName</li>
+        }
+    </ul>
+
+</body>
+</html>
